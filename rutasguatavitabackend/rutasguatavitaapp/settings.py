@@ -55,9 +55,11 @@ MIDDLEWARE = [
     'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
-CORS_ALLOW_ALL_ORIGINS = True
-
-CORS_ALLOW_CREDENTIALS = True
+CORS_ORIGIN_WHITELIST = (
+    'http://localhost:5500',
+    'https://tourist--destinations.herokuapp.com/searches/',
+    'https://tourist--destinations.herokuapp.com/searches/1/',
+)
 
 
 ROOT_URLCONF = 'rutasguatavitaapp.urls'
