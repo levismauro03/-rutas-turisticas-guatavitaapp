@@ -61,6 +61,10 @@ CORS_ORIGIN_WHITELIST = (
     'https://tourist--destinations.herokuapp.com/searches/1/',
 )
 
+CORS_ALLOW_ALL_ORIGINS = True
+
+CORS_ALLOW_CREDENTIALS = True
+
 
 ROOT_URLCONF = 'rutasguatavitaapp.urls'
 
