@@ -1,12 +1,19 @@
 
 const url = "https://tourist--destinations.herokuapp.com/searches/";
-// const url = "http://localhost:8000/searches/";
+const requestOptions = {
+  "method": 'GET',
+  "mode": "cors",
+  "redirect": 'follow',
+  "Access-Control-Allow-Headers" : "Content-Type",
+  "Access-Control-Allow-Origin": "https://tourist--destination-front.herokuapp.com/",
+  "Access-Control-Allow-Methods": "OPTIONS,POST,GET"
+};
 const select = document.querySelector("#select");
 const btn = document.getElementById("submit");
 
 
 const getTouristDestinations = async() => {
-    const res = await fetch(url);
+    const res = await fetch(url, requestOptions);    
     const datos = await res.json();
     
     for (let data of datos) {
